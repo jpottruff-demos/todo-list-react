@@ -8,7 +8,7 @@ export class Todoitem extends Component {
             background: '#f4f4f4',
             padding: '10px',
             borderBottom: '1px #ccc dotted',
-            textDecoration: this.props.todo.complete ?
+            textDecoration: this.props.todo.completed ?
                 'line-through' : 'none'
         }
     }
@@ -39,9 +39,11 @@ export class Todoitem extends Component {
     }
 }
 
-//PropTypes
+// PropTypes
 Todoitem.propTypes = {
-    todo: PropTypes.object.isRequired
+    todo: PropTypes.object.isRequired,
+    markComplete: PropTypes.func.isRequired,
+    delTodo: PropTypes.func.isRequired,
 }
 
 // Style Variables (example)
